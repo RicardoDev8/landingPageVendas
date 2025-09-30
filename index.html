@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garimpo das Promoções</title>
+    <style>
+        /* Estilos CSS para a página */
+        :root {
+            --cor-fundo: #008050; /* Verde escuro */
+            --cor-texto-principal: #ffffff; /* Branco */
+            --cor-botao-fundo: #ffcc00; /* Amarelo */
+            --cor-botao-texto: #008000; /* Verde escuro */
+            --cor-destaque: #006400; /* Verde mais escuro */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto-principal);
+            text-align: center;
+            background-image: radial-gradient(circle, var(--cor-destaque) 20%, var(--cor-fundo) 80%);
+            background-size: 200% 200%;
+            animation: brilhoFundo 20s ease-in-out infinite;
+        }
+        
+        @keyframes brilhoFundo {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            border: 3px solid var(--cor-botao-fundo);
+            max-width: 90%;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            color: var(--cor-botao-fundo);
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--cor-botao-fundo);
+            color: var(--cor-botao-texto);
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid var(--cor-destaque);
+            animation: bounce 2s infinite;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .cta-button:active {
+            transform: scale(0.98);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-15px);
+            }
+            60% {
+                transform: translateY(-8px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Garimpo das Promoções</h1>
+        <p>
+            Encontre as melhores ofertas e descontos em primeira mão! 
+            Não perca nenhuma oportunidade de economizar.
+        </p>
+        <a href="https://chat.whatsapp.com/IcbNPpFc0G28tPycsBvvtR?mode=ems_copy_t" class="cta-button" id="whatsapp-link">
+            Entrar no Grupo de WhatsApp
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const whatsappLink = document.getElementById("whatsapp-link");
+            
+            // Coloque o link do seu grupo do WhatsApp aqui
+            const linkDoGrupo = "https://chat.whatsapp.com/SEULINKDOGRUPO";
+
+            whatsappLink.href = linkDoGrupo;
+        });
+    </script>
+</body>
+</html>
